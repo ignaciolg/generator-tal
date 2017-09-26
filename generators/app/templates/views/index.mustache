@@ -1,0 +1,26 @@
+{{{ root_html_tag }}}
+
+    <head>
+        <script src="https://use.fontawesome.com/38d8067f6c.js"></script>
+        {{{ headers }}}
+
+        <link rel='stylesheet' href='style/base.css'/>
+
+        <script type='text/javascript' src='script/config/antie.config.js'></script>
+        <script type='text/javascript' src='script/config/require.config.js'></script>
+        <script type='text/javascript' data-main='script/index.js' src='node_modules/requirejs/require.js'></script>
+        <!--<script type='text/javascript' data-main='script/index.js' src='script/lib/require.js'></script>-->
+        <script>
+            antie.framework.deviceConfiguration = {{{ device_configuration }}};
+        </script>
+    </head>
+
+    <body>
+        {{{ extra_body }}}
+
+        <div id='splash'></div>
+        <div id='app'></div>
+
+    </body>
+
+</html>

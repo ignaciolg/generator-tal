@@ -1,0 +1,632 @@
+/**
+ * @preserve Copyright (c) 2013 British Broadcasting Corporation
+ * (http://www.bbc.co.uk) and TAL Contributors (1)
+ *
+ * (1) TAL Contributors are listed in the AUTHORS file and at
+ *     https://github.com/fmtvp/TAL/AUTHORS - please extend this file,
+ *     not this notice.
+ *
+ * @license Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * All rights reserved
+ * Please contact us for an alternative licence
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica", sans-serif;
+    font-weight: lighter;
+    color: #d4d4d4;
+    /* background-color: #000000; */
+}
+
+object {
+    position: absolute;
+}
+
+#splash {
+    background-image: url(/img/splash.png);
+    z-index: 10000;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    -webkit-transition: opacity 500ms linear;
+    transition: opacity 500ms linear;
+}
+
+#app {
+    top: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#menu-container {
+    position: fixed;
+    background-color: #081c24;
+    width: 17%;
+    height: 100%;
+    padding: 1%;
+}
+
+#menu .button {
+    color: #fff;
+    background-color: #081c24;
+    display: table;
+    float: left;
+    width: 90%;
+    line-height: 28px;
+    font-size: 21px;
+}
+
+#menu .focus.button {
+    color: #01d277;
+}
+
+#menu .button span {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+}
+
+#menu .button .fa {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    font-size: 28px;
+}
+
+#menu .focus span.widget.label {
+    font-size: 21px;
+}
+
+#separator {
+    position: fixed;
+    width: 1%;
+    height: 100%;
+    left: 17%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#081c24+0,f4f4f4+100 */
+    background: #081c24;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #081c24 0%, #f4f4f4 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #081c24 0%, #f4f4f4 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #081c24 0%, #f4f4f4 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#081c24', endColorstr='#f4f4f4', GradientType=1);
+    /* IE6-9 */
+}
+
+#sub-component-container {
+    background-color: #f4f4f4;
+    position: fixed;
+    width: 82%;
+    height: 100%;
+    left: 18%;
+    padding: 1%;
+    display: table;
+}
+
+
+/*info*/
+
+#info {}
+
+#info {
+    /* float:left; */
+    color: #081c24;
+    font-size: 28px;
+}
+
+#h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 33px;
+    margin: 0 0 15px 0;
+}
+
+.title {
+    font-weight: normal;
+}
+
+.verticallist>.horizontallist>.listitem {
+    /* display: block; */
+    display: initial !important;
+}
+
+span.widget.label.listitem.title {
+    margin: 45px 0 0 0;
+}
+
+span.widget.label.listitem.second {
+    left: 17%;
+    position: absolute;
+    width: 869px;
+    overflow: hidden;
+    height: 22px;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    top: 9px;
+}
+
+
+/**/
+
+#about-page {
+    height: 500px;
+    width: 800px;
+    line-height: 21px;
+    background-color: transparent;
+}
+
+#about-page.focus {
+    background-color: #DCDCDC;
+}
+
+#pager {
+    height: 500px;
+    overflow: auto;
+}
+
+
+/**/
+
+.local-video {
+    height: 65px !important;
+    margin: 10px !important;
+    display: table !important;
+    width: 300px !important;
+    color: #fff !important;
+    background-color: #081c24 !important;
+}
+
+.local-video.focus {
+    color: #01d277 !important;
+}
+
+.local-video>.label {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/**/
+
+div#video-list {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/**/
+
+.fa {
+    margin: 0;
+}
+
+.focus>.fa {
+    color: #01d277;
+}
+
+
+/**/
+
+.tmdb-item.button {
+    background-color: transparent;
+}
+
+.tmdb-item.button.focus {
+    background-color: #081c24;
+    border: 2px solid #01d277;
+}
+
+.tmdb-item span {
+    position: absolute;
+    background-color: rgba(210, 210, 210, 0.9);
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 90px;
+    top: 432px;
+    width: 342px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* detail */
+
+#detail {}
+
+#cover {
+    filter: brightness(285%) grayscale(1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    top: -14px;
+    left: -12px;
+}
+
+#play-detail {
+    background-color: #081c24;
+    color: white;
+}
+
+#play-detail.focus {
+    color: #01d277;
+}
+
+#play-detail .widget.label {
+    margin: 0 10px 0 0;
+}
+
+#description {
+    top: 0px;
+    float: left;
+    display: block;
+    position: absolute;
+    left: 410px;
+    color: #081c24;
+    font-weight: 600;
+    width: 583px;
+}
+
+
+/**/
+
+.widget.container.componentcontainer.listitem.main {
+    background-color: pink;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+
+/*media*/
+
+#media {}
+
+div#back {
+    background: transparent;
+    position: absolute;
+    font-size: 26px;
+    left: 10px;
+    top: 10px;
+}
+
+#controlls {
+    position: absolute;
+    font-size: 26px;
+    left: 30px;
+    top: 645px;
+    text-shadow: #000 0px 0px 1px;
+}
+
+#controlls>div {
+    position: relative;
+    float: left;
+    background-color: transparent;
+    color: #081c24 !important;
+}
+
+#scrub-bar {
+    background-color: #081c24 !important;
+    width: 900px;
+    max-width: initial;
+    top: 13px;
+}
+
+.scrubbarbuffer {
+    height: 2px;
+    background-color: #01d277;
+    ;
+}
+
+
+/* Loading screen */
+
+#static-loading-screen {
+    position: absolute;
+}
+
+
+/* margin-top: 100px;
+    z-index: 100;
+    width: 100%; */
+
+#static-loading-screen p {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 0 50px;
+}
+
+
+/* List widgets */
+
+.horizontallist,
+.verticallist {
+    position: relative;
+}
+
+.horizontallist .listitem {
+    display: inline-block;
+}
+
+
+/* nested lists - use #IDs instead for more complex layouts */
+
+.verticallist .horizontallist .listitem {
+    display: inline-block;
+}
+
+.verticallist .listitem {
+    display: block;
+    position: relative;
+}
+
+
+/* nested lists - use #IDs instead for more complex layouts */
+
+.horizontallist .verticallist .listitem {
+    display: block;
+}
+
+
+/* Horizontal carousel widgets */
+
+
+/* the mask is the top level of the carousel and defines where it is displayed and how much is visible */
+
+.horizontallistmask {
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/* ensure nested carousels have correct formatting, you may need to target IDs in complex layouts */
+
+.horizontallistmask .horizontallist .listitem {
+    display: inline-block;
+}
+
+.horizontalcarousel {
+    width: 99999px;
+    /* needs to be big enough so carousel plus clones do not flow onto more then one line */
+}
+
+
+/* DEVICE SPECIFIC DEFAULTS EXAMPLE ------------------ */
+
+
+/* if you target some consoles you may need to add additional styles like this */
+
+.someConsoles .horizontallist .listitem {
+    display: inline-block;
+    float: left;
+}
+
+
+/* If you target some older tv models, you will need to specify
+initial element background in the base stylesheet, not in dynamically loaded styles. */
+
+.sometv.layout540p #app {
+    width: 960px;
+    height: 540px;
+    /*background-image: url(some/image/url_540.png); */
+}
+
+.sometv.layout720p #app {
+    width: 1280px;
+    height: 720px;
+    /*background-image: url(some/image/url_720.png); */
+}
+
+.sometv.layout1080p #app {
+    width: 1920px;
+    height: 1080px;
+    /*background-image: url(some/image/url_1080.png); */
+}
+
+
+/* SAMPLEAPP BASE STYLES */
+
+
+/* Core */
+
+
+/* Maple needs initial element background in base stylesheet... not in dynamically loaded styles! */
+
+.samsung.layout540p #app {
+    width: 960px;
+    height: 540px;
+    background-image: url(../img/background_540.png);
+    background-repeat: no-repeat;
+    background-color: red;
+}
+
+.samsung.layout720p #app {
+    width: 1280px;
+    height: 720px;
+    background-image: url(../img/background_720.png);
+    background-repeat: no-repeat;
+}
+
+.samsung.layout1080p #app {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../img/background_1080.png);
+    background-repeat: no-repeat;
+}
+
+
+/* Sample app specific styles */
+
+#title {
+    font-size: 150%;
+    line-height: 120%;
+    display: block;
+    text-align: center;
+    margin: 2% auto 0 auto;
+}
+
+.button {
+    background-color: #DCDCDC;
+    display: block;
+    text-align: center;
+    max-width: 600px;
+    padding: 8px;
+    margin: 8px auto 0 auto;
+    color: #000000;
+}
+
+.buttonFocussed {
+    background-color: #FFD700;
+    color: #000000;
+}
+
+.buttonFocussed.menuendpoint {
+    background-color: #FFD700;
+}
+
+.background-none {
+    background-image: none !important;
+    background-color: transparent !important;
+}
+
+.description {
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    padding: 8px 0px;
+}
+
+#testPlayer {
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1280px;
+    height: 720px;
+}
+
+#playerButtons {
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    text-align: center;
+    padding: 8px;
+    color: #000000;
+}
+
+#playerButtons .button {
+    width: 75px;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+
+/* Display & Visibility Helpers */
+
+.display-none {
+    display: none !important;
+}
+
+.visibility-hidden {
+    visibility: hidden !important;
+}
+
+.carouselmask {
+    overflow: hidden;
+}
+
+.carouselwidgetstrip {
+    position: relative;
+    white-space: nowrap;
+}
+
+.carouselwidgetstrip.vertical>.carouselItem {
+    display: block;
+}
+
+.carouselwidgetstrip.horizontal>.carouselItem {
+    display: inline-block;
+}
+
+#carouselComponent {
+    position: relative;
+}
+
+#carouselComponent>.carouselmask {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#carouselComponent>.description {
+    position: static;
+}
+
+.carouselwidgetstrip>.button {
+    margin: 0 10px 0 0;
+    /* margin: 0;
+    width: 200px;
+    padding: 32px; */
+}
+
+.carouselwidgetstrip.vertical>.button {
+    height: 200px;
+}
+
+#progressBar {
+    margin-top: 10%;
+    width: 50%;
+    margin-left: 25%;
+    min-height: 10px;
+    background: #070;
+}
+
+#progressBar_left {
+    min-height: 10px;
+    background: #700;
+}
+
+#progressBar_inner {
+    width: 10px;
+    min-height: 10px;
+    background: #777;
+    position: relative;
+}

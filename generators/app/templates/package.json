@@ -1,0 +1,23 @@
+{
+  "name": "talexample",
+  "version": "0.2.0",
+  "description": "Example application for the TAL framwork.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "tal",
+    "talframework",
+    "bbc"
+  ],
+  "dependencies": {
+    "eslint": "latest",
+    "express": "^4.13.4",
+    "mustache-express": "^1.2.2",
+    "requirejs": "^2.3.2",
+    "requirejs-domready": "^2.0.3",
+    "tal": "fmtvp/tal#semver:~7",
+    "text": "github:requirejs/text"
+  }
+}
