@@ -1,50 +1,30 @@
-# generator-tal 
+# BBC TAL generator
 
-> Generator for BBC TAL framework
+> Yeoman generator for BBC TAL framework 7.x version - Scaffolding with some BBC TAL examples, including the component lifecycle, usage common widgets and how to work with XHR.
 
-## Instalación
+## Usage
 
-Para poder usar el generador primero debemos de tener instalado Node.js y NPM. En el caso de no tenerlo instalado podemos seguir las instrucciones de https://nodejs.org/en/ para descargar la última versión.
-
-A continuación, debemos de instalar las siguientes dependencias:
-
+Install `yo` and`generator-tal`:
 ```bash
-npm install –g yo
+npm install –g yo generator-tal
 ```
 
-Ahora tendremos que instalar el generador desde la carpeta generator-tal que podemos encontrar en el CD/USB:
-
-```bash
-cp -R /media/cdrom/generator-tal /tmp/
-cd /tmp/generator-tal
-npm i
-npm link
+Make a new directory, and `cd` into it:
+```
+mkdir my-new-project && cd $_
 ```
 
-Crearemos un directorio y haremos cd sobre el mismo:
-
-```bash
-mkdir tal-project && cd tal-project
+Run `yo tal`:
 ```
-Ejecutaremos yo tal, y de forma opcional le otorgaremos un nombre de Proyecto:
-
-```bash
-yo tal [nombre de aplicación]
+yo tal
 ```
 
+Run `npm start` for preview.
 
-Ejecutaremos el proyecto para empezar a servir la aplicación TAL.
+Now you will be able to access to the example application following the next URL:
 
-```bash
-npm start
-```
+[http://localhost:1337/](http://localhost:1337/)
 
-
-Ahora podremos acceder a nuestra aplicación de ejemplo usando la siguiente URL:
-
-```bash
-http://localhost:1337/
-```
 
 
 ## License
