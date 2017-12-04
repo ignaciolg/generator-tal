@@ -1,6 +1,6 @@
 {
   "name": "talexample",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Example application for the TAL framwork.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "mustache-express": "^1.2.2",
     "requirejs": "^2.3.2",
     "requirejs-domready": "^2.0.3",
-    "tal": "fmtvp/tal#semver:~7",
+    "tal": "7",
     "text": "github:requirejs/text"
   }
 }
